@@ -61,9 +61,21 @@ router.delete("/:id", async (req, res) => {
 });
 
 // Get post
+router.get("/:id", async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    res.status(200).json(post);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Get all posts
+
 router.get("/", async (req, res) => {
   const username = req.query.user;
-  const catName = req.query.catName;
+  const catName = req.query.cat;
+
   try {
     let posts;
     if (username) {
@@ -78,7 +90,7 @@ router.get("/", async (req, res) => {
       posts = await Post.find();
     }
     res.status(200).json(posts);
-  } catch {
+  } catch (err) {
     res.status(500).json(err);
   }
 });
