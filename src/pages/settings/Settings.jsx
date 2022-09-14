@@ -1,5 +1,6 @@
 import Sdiebar from "../../components/sidebar/Sidebar";
 import "./settings.css";
+import React from "react";
 
 export default function Setting() {
   return (
