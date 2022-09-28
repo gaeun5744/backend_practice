@@ -6,11 +6,13 @@ import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 
-import React from "react";
+import React, { useContext } from "react";
 // eslint-disable-next-line
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Context } from "./context/Context";
+
 function App() {
-  const user = false;
+  const { user } = useContext(Context);
   return (
     <BrowserRouter>
       <TopBar />
