@@ -25,7 +25,6 @@ export default function Login() {
     }
   };
 
-  console.log(user);
   return (
     <div className="login">
       <span className="loginTitle">Login</span>
