@@ -11,6 +11,9 @@ export default function SinglePost() {
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
 
+  const content = post.desc;
+  const contentArr = (content || "").split("\n");
+
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("/posts/" + path);
@@ -45,7 +48,9 @@ export default function SinglePost() {
             {new Date(post.createdAt).toDateString}
           </span>
         </div>
-        <p className="singlePostDesc">{post.desc}</p>
+        {contentArr.map((c) => (
+          <p className="postDesc">{c}</p>
+        ))}
       </div>
     </div>
   );
