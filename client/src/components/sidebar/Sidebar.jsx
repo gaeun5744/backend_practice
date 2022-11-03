@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default function Sdiebar() {
+export default function Sidebar() {
   const [cats, setCats] = useState([]);
   useEffect(() => {
     const getCats = async () => {

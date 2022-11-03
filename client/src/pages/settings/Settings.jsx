@@ -1,4 +1,4 @@
-import Sdiebar from "../../components/sidebar/Sidebar";
+import Sidebar from "../../components/sidebar/Sidebar";
 import "./settings.css";
 import React from "react";
 
@@ -31,7 +31,7 @@ export default function Setting() {
           <button className="settingsSubmit">Update</button>
         </form>
       </div>
-      <Sdiebar />
+      <Sidebar />
     </div>
   );
 }

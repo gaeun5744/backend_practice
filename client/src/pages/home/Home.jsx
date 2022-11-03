@@ -1,6 +1,6 @@
 import Header from "../../components/header/Header";
 import Posts from "../../components/posts/Posts";
-import Sdiebar from "../../components/sidebar/Sidebar";
+import Sidebar from "../../components/sidebar/Sidebar";
 import "./home.css";
 import React from "react";
 import axios from "axios";
@@ -24,7 +24,7 @@ export default function Home() {
       <Header />
       <div className="home">
         <Posts posts={posts} />
-        <Sdiebar />
+        <Sidebar />
       </div>
     </>
   );
